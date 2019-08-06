@@ -191,5 +191,26 @@ class RepositorioEntrada {
         }
         return $titulo_existe;
     }
+    
+     public static function urlExiste($conexion, $url) {
+        $url_existe = true;
+        if (isset($conexion)) {
+            try {
+                $sql = "SELECT * FROM entradas WHERE url= :url ";
+                $sentencia = $conexion->prepare($sql);
+                $sentencia->bindParam(':url', $url, PDO::PARAM_STR);
+                $sentencia->execute();
+                $resultado = $sentencia->fetchAll();
+                if (count($resultado)){
+                    $url_existe=true;
+                }else{
+                    $url_existe=false;
+                }
+            } catch (PDOException $ex) {
+                print'ERROR' . $ex->getMessage();
+            }
+        }
+        return $url_existe;
+    }
 
 }

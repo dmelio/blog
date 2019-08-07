@@ -56,7 +56,12 @@ class validadorEntrada {
             $this->url = $url;
         }
         //valida espacios en blanco
-        if (strlen($url) != strlen(trim($url))) {
+        $url_tratada = str_replace(' ','',$url);
+        $url_tratada = preg_replace('/\s+/','',$url_tratada);
+        
+        
+        
+        if (strlen($url) != strlen($url_tratada)) {
             return "la URL no puede tener espacios";
         }
         if (RepositorioEntrada::urlExiste($conexion, $titulo)) {
@@ -103,19 +108,19 @@ class validadorEntrada {
     }
 
     public function mostrarErrorTitulo() {
-        if (!$this->error_titulo != "") {
+        if ($this->error_titulo != "") {
             echo $this->aviso_inicio . $this->error_titulo . $this->aviso_cierre;
         }
     }
 
     public function mostrarErrorUrl() {
-        if (!$this->error_url != "") {
+        if ($this->error_url != "") {
             echo $this->aviso_inicio . $this->error_url . $this->aviso_cierre;
         }
     }
 
     public function mostrarErrorTexto() {
-        if (!$this->error_texto != "") {
+        if ($this->error_texto != "") {
             echo $this->aviso_inicio . $this->error_texto . $this->aviso_cierre;
         }
     }

@@ -1,5 +1,8 @@
 <?php
-include_once'app/EscritorEntradas.inc.php'
+include_once'app/EscritorEntradas.inc.php';
+include_once 'app/RepositorioEntrada.inc.php';
+include_once 'app/Entrada.inc.php';
+
 ?>
 <div class="row">
     <div class="col-md-12">
@@ -21,6 +24,9 @@ include_once'app/EscritorEntradas.inc.php'
                     <p>
                         <?php echo EscritorEntradas::resumirTexto(nl2br($entrada_actual->obtenerTexto())); ?>
                     </p>
+                    <div class="text-left">
+                        <a class="btn btn-primary" href="<?php echo RUTA_ENTRADA . '/' . $entrada->obtenerUrl() ?>" role="button">Leer mas</a>
+                    </div>
                 </div>
             </div>
         </div>

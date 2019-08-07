@@ -212,5 +212,26 @@ class RepositorioEntrada {
         }
         return $url_existe;
     }
+    
+    public static function eliminarComentariosyEntradas($conexion,$entrada_id){
+        if(isset($conexion)){
+            try{
+                $conexion->beginTransaction();
+                $sql1="DELETE FROM comentarios WHERE entrada_id = :entrada_id";
+                $sentencia1 = $conexion->prepare($sql1);
+                $sentencia1 -> bindParam(':entrada_id',$entrada_id,PDO::PARAM_STR);
+                $sentencia1->execute();
+                
+                $sql2="DELETE FROM entradas WHERE id = :entrada_id";
+                $sentencia2 = $conexion->prepare($sql2);
+                $sentencia2 -> bindParam(':entrada_id',$entrada_id,PDO::PARAM_STR);
+                $sentencia2->execute();
+                $conexion-> commit();
+            } catch (PDOException $ex) {
+                print'ERROR' . $ex->getMessage();
+                $conexion -> rollBack();
+            }
+        }
+    }
 
 }

@@ -16,7 +16,8 @@
                         <th>Titulo</th>
                         <th>Estado</th>
                         <th>Comentarios</th>
-                        <th>Acciones</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +33,12 @@
                             <td><?php echo $comentarios_entrada_actual ?></td>
                             <td>
                                 <button type="button" class="btn btn-default btn-xs">Editar</button>
-                                <button type="button" class="btn btn-default btn-xs">Eliminar</button>
+                            </td>
+                            <td>
+                                <form method="post" action="<?php echo RUTA_BORRAR_ENTRADA; ?>"> 
+                                    <input type="hidden" name="id_borrar" value="<?php echo $entrada_actual->obtenerId(); ?>">
+                                    <button type="submit" name="borrar_entrada" class="btn btn-default btn-xs">Eliminar</button>  
+                                </form>
                             </td>
                         </tr>
                         <?php

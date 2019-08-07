@@ -40,10 +40,13 @@ if ($partes_ruta[0] == 'Pagina') {
                 $gestor_actual='';
                 break;
             case 'relleno-dev':
-                $ruta_elegida = 'vistas/script-relleno.php';
+                $ruta_elegida = 'scripts/script-relleno.php';
                 break;
             case 'nueva-entrada':
                 $ruta_elegida = 'vistas/nueva-entrada.php';
+                break;
+            case 'borrar-entrada':
+                $ruta_elegida = 'scripts/borrar-entrada.php';
                 break;
         }
     } else if (count($partes_ruta) == 3) {

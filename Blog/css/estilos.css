@@ -1,0 +1,167 @@
+body {
+    background-image: url('../img/what-the-hex.png');
+}
+
+.jumbotron {
+    background-color: #2b2b2b;
+    color: whitesmoke;
+}
+
+.panel-heading {
+    background-color: deepskyblue !important;
+    color: whitesmoke !important;
+}
+
+.panel-body {
+    color: #2b2b2b !important;
+}
+
+.navbar {
+    background-color: #2b2b2b;
+}
+
+.navbar-brand:link,
+.navbar-brand:visited {
+    color: deepskyblue !important;
+}
+
+.navbar-brand:active,
+.navbar-brand:hover {
+    color: white;
+}
+
+#navbar li a:link,
+#navbar li a:visited {
+    color: whitesmoke !important;
+}
+
+#navbar li a:hover,
+#navbar li a:active {
+    color: deepskyblue !important;
+}
+
+.btn-default {
+    color: deepskyblue;
+}
+
+.navbar li dropdown-menu {
+    color: #2b2b2b
+}
+
+.dropdown-menu {
+    background-color: #2b2b2b;
+}
+
+.open>a {
+    background-color: #2b2b2b !important;
+}
+
+.btn-primary {
+    background-color: deepskyblue !important;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2b2b2b !important;
+}
+
+.contenido-articulo {
+    background-color: white;
+    padding: 2em;
+}
+
+.sidebar {
+    background-color: whitesmoke;
+    margin-top: -0.1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.1em;
+}
+
+.gg-elemento {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: white;
+}
+
+.gg-elemento:hover {
+    background-color: #2b2b2b !important;
+    color: deepskyblue;
+}
+
+#gg-entradas {
+    background-color: deepskyblue;
+}
+
+#gg-comentarios {
+    background-color: #029ac4;
+}
+
+#gg-favoritos {
+    background-color: #394a66;
+}
+
+.parte-gestor-entradas {
+    background-color: #394a66;
+    color: whitesmoke;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: white;
+    color: black;
+}
+
+.table-striped>tbody>tr>td {
+    background-color: white;
+    border-bottom: 1px solid #2b2b2b;
+    border-top: 1px solid #2b2b2b;
+}
+
+.table-striped>thead>tr>th {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+#poto {
+    background-color: #2b2b2b;
+}
+
+#g-publicaciones {
+    padding-bottom: 1.2em;
+}
+
+#fondo-tabla {
+    background-color: #394a66;
+}
+
+#btn-nueva-entrada {
+    background-color: white !important;
+    color: black !important;
+}
+
+#btn-nueva-entrada:hover {
+    background-color: #2b2b2b !important;
+    color: whitesmoke !important;
+}
+
+.form-nueva-entrada {
+    background-color: white;
+    padding: 2em;
+}
+
+#likesandcoment {
+    padding: 0.7em;
+}
+
+#fila-pie {
+    background-color: #2b2b2b;
+    color: white;
+    padding-left: 4em;
+}
+
+#fila-pie2 {
+    background-color: #2b2b2b;
+    color: white;
+    padding-bottom: 0.4em;
+    padding-right: 4em;
+}
